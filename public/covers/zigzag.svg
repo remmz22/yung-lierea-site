@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0614"/>
+      <stop offset=".55" stop-color="#120a2a"/>
+      <stop offset="1" stop-color="#050310"/>
+    </linearGradient>
+    <linearGradient id="z" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset=".5" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".6"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <g opacity=".16" stroke="#a855f7">
+    <path d="M0 90 H640 M0 210 H640 M0 330 H640 M0 450 H640 M0 570 H640" stroke-width="1"/>
+  </g>
+  <g filter="url(#glow)" fill="none" stroke="url(#z)" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M40 470 L150 470 L215 300 L300 560 L385 250 L470 520 L545 380 L600 380"/>
+  </g>
+  <g filter="url(#glow)" fill="none" stroke="#22d3ee" stroke-width="3" opacity=".8">
+    <path d="M40 500 L150 500 L215 330 L300 590 L385 280 L470 550 L545 410 L600 410"/>
+  </g>
+  <circle cx="385" cy="250" r="10" fill="#f472b6" filter="url(#glow)"/>
+  <circle cx="215" cy="300" r="7" fill="#22d3ee" filter="url(#glow)"/>
+  <text x="40" y="86" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="44" fill="#ffffff" letter-spacing="6">ZIGZAG</text>
+  <text x="40" y="612" font-family="Arial, sans-serif" font-size="16" fill="#a5b4fc" letter-spacing="8">YUNG LIEREA</text>
+  <text x="560" y="612" text-anchor="end" font-family="monospace" font-size="16" fill="#67e8f9">140 BPM</text>
+  <rect width="640" height="640" fill="url(#vig)"/>
+</svg>

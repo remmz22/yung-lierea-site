@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="1" stop-color="#0b1026"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset=".25" stop-color="#22d3ee"/>
+      <stop offset=".7" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="g" x="-50%" y="-10%" width="200%" height="120%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".55"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#flow)" stroke-width="5" stroke-linecap="round">
+    <path d="M90 0 Q 70 160 105 320 Q 140 480 95 640"/>
+    <path d="M170 0 Q 150 160 185 320 Q 220 480 175 640" opacity=".9"/>
+    <path d="M250 0 Q 230 160 265 320 Q 300 480 255 640" opacity=".75"/>
+    <path d="M330 0 Q 310 160 345 320 Q 380 480 335 640" opacity=".9"/>
+    <path d="M410 0 Q 390 160 425 320 Q 460 480 415 640" opacity=".7"/>
+    <path d="M490 0 Q 470 160 505 320 Q 540 480 495 640" opacity=".85"/>
+    <path d="M570 0 Q 550 160 585 320 Q 620 480 575 640" opacity=".6"/>
+  </g>
+  <ellipse cx="320" cy="330" rx="300" ry="40" fill="#a855f7" opacity=".12" filter="url(#g)"/>
+  <text x="40" y="86" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="42" fill="#e2e8f0" letter-spacing="2">oluk oluk</text>
+  <text x="40" y="612" font-family="Arial, sans-serif" font-size="16" fill="#67e8f9" letter-spacing="8">YUNG LIEREA</text>
+  <text x="600" y="612" text-anchor="end" font-family="monospace" font-size="16" fill="#a5b4fc">130 BPM</text>
+  <rect width="640" height="640" fill="url(#vig)"/>
+</svg>

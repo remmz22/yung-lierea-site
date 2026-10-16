@@ -1,0 +1,122 @@
+// Yung Lierea — Veritabanı şeması
+// SQLite ile lokal geliştirme; production için `provider = "postgresql"` yapıp
+// DATABASE_URL'i Postgres bağlantı adresiyle değiştirmeniz yeterli.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Kullanıcılar (admin panel erişimi) ───
+model User {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  role         String   @default("ADMIN") // ADMIN | EDITOR
+  createdAt    DateTime @default(now())
+}
+
+// ─── Release'ler (single / EP / albüm) ───
+model Release {
+  id          String            @id @default(cuid())
+  slug        String            @unique
+  title       String
+  type        String            @default("SINGLE") // SINGLE | EP | ALBUM
+  coverUrl    String            @default("/covers/zigzag.jpg")
+  bpm         Int?
+  genres      String            @default("") // virgülle ayrılmış etiketler
+  durationSec Int?
+  description String            @default("")
+  spotifyUrl  String?
+  releaseDate DateTime
+  lyrics      String?
+  credits     String?
+  plays       Int               @default(0)
+  status      String            @default("PUBLISHED") // DRAFT | PUBLISHED
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  versions    ReleaseVersion[]
+
+  @@index([status, releaseDate])
+}
+
+// ─── Release sürüm geçmişi (version history) ───
+model ReleaseVersion {
+  id        String   @id @default(cuid())
+  releaseId String
+  release   Release  @relation(fields: [releaseId], references: [id], onDelete: Cascade)
+  snapshot  String // JSON
+  createdAt DateTime @default(now())
+}
+
+// ─── Medya (galeri / profil görselleri) ───
+model MediaItem {
+  id        String   @id @default(cuid())
+  url       String
+  title     String   @default("")
+  kind      String   @default("GALLERY") // GALLERY | PROFILE
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+// ─── İletişim formu mesajları ───
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  body      String
+  type      String?  // booking | collab | question | press | other
+  city      String?  // booking: etkinlik şehri
+  eventDate String?  // booking: etkinlik tarihi (ISO)
+  budget    String?  // booking: bütçe aralığı
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+// ─── E-poste bülten aboneleri ───
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+// ─── Basit sayfa görüntüleme analitiği (cookie consent ile) ───
+model PageView {
+  id        String   @id @default(cuid())
+  path      String
+  referrer  String?
+  createdAt DateTime @default(now())
+
+  @@index([path, createdAt])
+}
+
+// ─── Site ayarları (admin panelden düzenlenir) ───
+model Setting {
+  key       String   @id // bookingEmail | instagram | tiktok | linkedin | spotify
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Site istatistikleri (Spotify'dan otomatik / admin elle) ───
+model SiteStat {
+  key       String   @id // monthlyListeners | followers | statsFetchedAt
+  value     Int
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Sosyal medya paylaşım kuyruğu (otomasyon) ───
+model SocialPost {
+  id          String    @id @default(cuid())
+  platform    String // instagram | twitter | linkedin
+  content     String
+  status      String    @default("DRAFT") // DRAFT | SCHEDULED | SENT
+  scheduledAt DateTime?
+  sentAt      DateTime?
+  releaseId   String?
+  createdAt   DateTime  @default(now())
+}

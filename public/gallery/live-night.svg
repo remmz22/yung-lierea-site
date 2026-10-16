@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07040f"/>
+      <stop offset="1" stop-color="#160b24"/>
+    </linearGradient>
+    <linearGradient id="beam1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beam2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f472b6" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beam3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a855f7" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- light beams -->
+  <path d="M200 0 L120 420 L300 420 Z" fill="url(#beam1)"/>
+  <path d="M420 0 L370 420 L520 420 Z" fill="url(#beam2)"/>
+  <path d="M630 0 L560 420 L700 420 Z" fill="url(#beam3)"/>
+  <!-- haze -->
+  <ellipse cx="400" cy="430" rx="380" ry="60" fill="#7c3aed" opacity=".18" filter="url(#g)"/>
+  <!-- crowd silhouettes -->
+  <g fill="#04030a">
+    <circle cx="60" cy="500" r="34"/><path d="M18 600 Q18 540 60 540 Q102 540 102 600 Z"/>
+    <circle cx="150" cy="520" r="40"/><path d="M100 600 Q100 552 150 552 Q200 552 200 600 Z"/>
+    <circle cx="250" cy="495" r="36"/><path d="M206 600 Q206 544 250 544 Q294 544 294 600 Z"/>
+    <circle cx="345" cy="525" r="42"/><path d="M292 600 Q292 550 345 550 Q398 550 398 600 Z"/>
+    <circle cx="450" cy="500" r="37"/><path d="M405 600 Q405 546 450 546 Q495 546 495 600 Z"/>
+    <circle cx="545" cy="522" r="40"/><path d="M496 600 Q496 550 545 550 Q594 550 594 600 Z"/>
+    <circle cx="645" cy="498" r="35"/><path d="M602 600 Q602 546 645 546 Q688 546 688 600 Z"/>
+    <circle cx="740" cy="524" r="41"/><path d="M690 600 Q690 550 740 550 Q790 550 790 600 Z"/>
+  </g>
+  <!-- hands -->
+  <g stroke="#04030a" stroke-width="10" stroke-linecap="round">
+    <line x1="90" y1="480" x2="78" y2="430"/>
+    <line x1="255" y1="475" x2="245" y2="420"/>
+    <line x1="432" y1="478" x2="442" y2="425"/>
+    <line x1="600" y1="482" x2="590" y2="430"/>
+  </g>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#e2e8f0" letter-spacing="8" opacity=".85">LIVE NIGHT</text>
+  <text x="400" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#a5f3fc" letter-spacing="10" opacity=".7">YUNG LIEREA</text>
+</svg>

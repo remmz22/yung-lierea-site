@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1214"/>
+      <stop offset="1" stop-color="#1c1210"/>
+    </linearGradient>
+    <filter id="g" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".55"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <g transform="translate(160 200)">
+    <rect x="0" y="60" width="320" height="220" rx="10" fill="none" stroke="#67e8f9" stroke-width="6" filter="url(#g)"/>
+    <path d="M0 60 L90 -10 L410 -10 L320 60" fill="none" stroke="#67e8f9" stroke-width="6" filter="url(#g)"/>
+    <path d="M410 -10 L410 200 L320 280" fill="none" stroke="#67e8f9" stroke-width="6" filter="url(#g)"/>
+    <line x1="150" y1="160" x2="170" y2="180" stroke="#f472b6" stroke-width="10" stroke-linecap="round"/>
+    <line x1="170" y1="160" x2="150" y2="180" stroke="#f472b6" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(-12 320 500)">
+    <rect x="120" y="455" width="400" height="90" rx="8" fill="none" stroke="#f472b6" stroke-width="5" filter="url(#g)"/>
+    <text x="320" y="520" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="44" fill="#f472b6" letter-spacing="4">OUT OF STOCK</text>
+  </g>
+  <text x="40" y="86" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="34" fill="#e2e8f0" letter-spacing="2">Out Of Stock</text>
+  <text x="40" y="612" font-family="Arial, sans-serif" font-size="16" fill="#a5f3fc" letter-spacing="8">YUNG LIEREA</text>
+  <text x="600" y="612" text-anchor="end" font-family="monospace" font-size="16" fill="#f9a8d4">105 BPM</text>
+  <rect width="640" height="640" fill="url(#vig)"/>
+</svg>

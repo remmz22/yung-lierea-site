@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0510"/>
+      <stop offset="1" stop-color="#160b26"/>
+    </linearGradient>
+    <linearGradient id="num" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="g" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".55"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <text x="320" y="360" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="230" fill="url(#num)" filter="url(#g)" letter-spacing="-6">97</text>
+  <g fill="#22d3ee" filter="url(#g)">
+    <rect x="60" y="440" width="10" height="46" rx="3"/>
+    <rect x="82" y="420" width="10" height="66" rx="3" opacity=".9"/>
+    <rect x="104" y="400" width="10" height="86" rx="3" opacity=".8"/>
+    <rect x="126" y="430" width="10" height="56" rx="3" opacity=".95"/>
+    <rect x="148" y="386" width="10" height="100" rx="3" opacity=".75"/>
+    <rect x="170" y="412" width="10" height="74" rx="3" opacity=".85"/>
+    <rect x="470" y="430" width="10" height="56" rx="3" opacity=".9"/>
+    <rect x="492" y="396" width="10" height="90" rx="3" opacity=".8"/>
+    <rect x="514" y="420" width="10" height="66" rx="3" opacity=".95"/>
+    <rect x="536" y="404" width="10" height="82" rx="3" opacity=".7"/>
+    <rect x="558" y="426" width="10" height="60" rx="3" opacity=".85"/>
+  </g>
+  <text x="320" y="245" text-anchor="middle" font-family="monospace" font-size="30" fill="#67e8f9" letter-spacing="14">B P M</text>
+  <text x="40" y="612" font-family="Arial, sans-serif" font-size="16" fill="#c4b5fd" letter-spacing="8">YUNG LIEREA</text>
+  <text x="600" y="612" text-anchor="end" font-family="monospace" font-size="16" fill="#f9a8d4">SINGLE</text>
+  <rect width="640" height="640" fill="url(#vig)"/>
+</svg>

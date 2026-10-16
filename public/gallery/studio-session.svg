@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0d1f"/>
+      <stop offset="1" stop-color="#131029"/>
+    </linearGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".8">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".5"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <ellipse cx="400" cy="180" rx="260" ry="140" fill="#a855f7" opacity=".14" filter="url(#g)"/>
+  <!-- microphone -->
+  <g filter="url(#g)">
+    <rect x="392" y="120" width="16" height="190" rx="8" fill="#334155"/>
+    <circle cx="400" cy="110" r="46" fill="#1e293b" stroke="#a855f7" stroke-width="4"/>
+    <circle cx="400" cy="110" r="30" fill="#0f172a" stroke="#67e8f9" stroke-width="2"/>
+    <path d="M330 210 Q 400 260 470 210" fill="none" stroke="#22d3ee" stroke-width="5"/>
+    <rect x="386" y="310" width="28" height="14" rx="4" fill="#475569"/>
+    <path d="M340 330 L 386 322 M414 322 L460 330" stroke="#475569" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- pop filter -->
+  <circle cx="480" cy="180" r="42" fill="none" stroke="#64748b" stroke-width="3" opacity=".8"/>
+  <line x1="480" y1="222" x2="480" y2="330" stroke="#64748b" stroke-width="6"/>
+  <!-- desk -->
+  <rect x="80" y="380" width="640" height="180" rx="14" fill="#0f1225" stroke="#312e81" stroke-width="2"/>
+  <g fill="#22d3ee" filter="url(#g)" opacity=".9">
+    <rect x="140" y="410" width="14" height="40" rx="4"/>
+    <rect x="170" y="424" width="14" height="26" rx="4" opacity=".8"/>
+    <rect x="200" y="400" width="14" height="50" rx="4" opacity=".9"/>
+    <rect x="230" y="418" width="14" height="32" rx="4" opacity=".7"/>
+  </g>
+  <g fill="#f472b6" filter="url(#g)" opacity=".85">
+    <rect x="560" y="412" width="14" height="36" rx="4"/>
+    <rect x="590" y="426" width="14" height="22" rx="4" opacity=".8"/>
+    <rect x="620" y="404" width="14" height="44" rx="4" opacity=".9"/>
+  </g>
+  <circle cx="400" cy="440" r="34" fill="none" stroke="#a855f7" stroke-width="4" filter="url(#g)"/>
+  <line x1="400" y1="440" x2="418" y2="424" stroke="#c084fc" stroke-width="4"/>
+  <text x="400" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#818cf8" letter-spacing="6">STÜDYO — BURSA</text>
+  <rect width="800" height="600" fill="url(#vig)"/>
+</svg>

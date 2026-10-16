@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08050f"/>
+      <stop offset="1" stop-color="#140a24"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".8">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".5"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- profile face wireframe -->
+  <g transform="translate(400 300)" filter="url(#g)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-40 -170 Q 60 -175 95 -90 Q 130 -5 108 60 Q 100 95 88 118" stroke="url(#face)" stroke-width="4"/>
+    <path d="M-40 -170 Q -105 -120 -96 -30 Q -90 40 -60 90 Q -30 130 10 150 L 30 200" stroke="#a855f7" stroke-width="4" opacity=".85"/>
+    <path d="M-10 -60 Q 30 -50 55 -18" stroke="#22d3ee" stroke-width="5"/>
+    <path d="M-96 -30 Q -60 -18 -30 -22" stroke="#67e8f9" stroke-width="4" opacity=".8"/>
+    <path d="M20 -30 L 26 -6" stroke="#f472b6" stroke-width="4"/>
+    <path d="M-64 -8 L -70 16" stroke="#f9a8d4" stroke-width="4" opacity=".8"/>
+    <path d="M30 60 Q 5 84 -18 78" stroke="#c084fc" stroke-width="4"/>
+    <path d="M50 30 Q 78 40 70 78" stroke="#a855f7" stroke-width="4" opacity=".7"/>
+    <path d="M-20 150 Q 10 185 60 190" stroke="#22d3ee" stroke-width="4" opacity=".6"/>
+    <path d="M40 -120 Q 70 -100 76 -60" stroke="#f472b6" stroke-width="3" opacity=".6"/>
+  </g>
+  <!-- scan lines -->
+  <g stroke="#a855f7" opacity=".14">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+  </g>
+  <text x="400" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#818cf8" letter-spacing="6">NEON PORTRE</text>
+  <rect width="800" height="600" fill="url(#vig)"/>
+</svg>

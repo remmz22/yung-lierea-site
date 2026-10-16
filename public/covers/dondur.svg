@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0618"/>
+      <stop offset="1" stop-color="#1a0b2e"/>
+    </linearGradient>
+    <filter id="g" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".55"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <g transform="translate(320 340)" filter="url(#g)" fill="none" stroke-linecap="round">
+    <circle r="60" stroke="#f472b6" stroke-width="10" stroke-dasharray="80 70" opacity=".95"/>
+    <circle r="105" stroke="#c084fc" stroke-width="8" stroke-dasharray="140 120" opacity=".85"/>
+    <circle r="150" stroke="#a855f7" stroke-width="6" stroke-dasharray="200 180" opacity=".7"/>
+    <circle r="195" stroke="#22d3ee" stroke-width="5" stroke-dasharray="260 240" opacity=".55"/>
+    <circle r="240" stroke="#67e8f9" stroke-width="3" stroke-dasharray="320 300" opacity=".4"/>
+    <circle r="18" fill="#f472b6"/>
+    <line x1="0" y1="0" x2="42" y2="-42" stroke="#fda4af" stroke-width="6"/>
+    <line x1="0" y1="0" x2="-30" y2="-52" stroke="#c084fc" stroke-width="4"/>
+  </g>
+  <text x="40" y="86" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="44" fill="#fbcfe8" letter-spacing="8">DÖNDÜR</text>
+  <text x="40" y="612" font-family="Arial, sans-serif" font-size="16" fill="#c4b5fd" letter-spacing="8">YUNG LIEREA</text>
+  <text x="600" y="612" text-anchor="end" font-family="monospace" font-size="16" fill="#67e8f9">96 BPM</text>
+  <rect width="640" height="640" fill="url(#vig)"/>
+</svg>

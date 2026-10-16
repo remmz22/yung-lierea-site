@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060913"/>
+      <stop offset="1" stop-color="#0d1b2e"/>
+    </linearGradient>
+    <filter id="g" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="vig" cx=".5" cy=".45" r=".75">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".55"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <g transform="translate(170 320)" filter="url(#g)">
+    <circle r="110" fill="none" stroke="#22d3ee" stroke-width="7"/>
+    <circle r="6" fill="#67e8f9"/>
+    <g stroke="#67e8f9" stroke-width="5" stroke-linecap="round">
+      <line x1="0" y1="-105" x2="0" y2="-88"/>
+      <line x1="0" y1="105" x2="0" y2="88"/>
+      <line x1="-105" y1="0" x2="-88" y2="0"/>
+      <line x1="105" y1="0" x2="88" y2="0"/>
+    </g>
+    <line x1="0" y1="0" x2="52" y2="-38" stroke="#f472b6" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-34" y2="-62" stroke="#a855f7" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <path d="M300 250 Q 380 150 480 190 T 620 120" fill="none" stroke="#f472b6" stroke-width="3" stroke-dasharray="10 8" filter="url(#g)"/>
+  <g transform="translate(612 118) rotate(-18)" filter="url(#g)">
+    <path d="M0 0 L26 8 L8 14 Z" fill="#f472b6"/>
+    <path d="M0 0 L-4 -14 L10 -4 Z" fill="#fda4af" opacity=".7"/>
+  </g>
+  <g stroke="#a855f7" stroke-width="1.5" opacity=".35">
+    <line x1="0" y1="140" x2="640" y2="140"/>
+    <line x1="0" y1="500" x2="640" y2="500"/>
+    <line x1="120" y1="0" x2="120" y2="640"/>
+    <line x1="520" y1="0" x2="520" y2="640"/>
+  </g>
+  <text x="40" y="86" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="40" fill="#e2e8f0" letter-spacing="6">JETLAG</text>
+  <text x="40" y="612" font-family="Arial, sans-serif" font-size="16" fill="#a5f3fc" letter-spacing="8">YUNG LIEREA</text>
+  <text x="600" y="612" text-anchor="end" font-family="monospace" font-size="16" fill="#c4b5fd">118 BPM</text>
+  <rect width="640" height="640" fill="url(#vig)"/>
+</svg>
